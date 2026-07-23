@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Onyx — Recherche</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background: #0e0e0e;
+    color: #f5f5f5;
+    margin: 0;
+    padding: 40px 20px;
+  }
+  .search-wrap {
+    max-width: 600px;
+    margin: 0 auto 40px;
+    position: relative;
+  }
+  #searchInput {
+    width: 100%;
+    padding: 14px 44px 14px 18px;
+    font-size: 16px;
+    border: 1px solid #333;
+    background: #1a1a1a;
+    color: #fff;
+    border-radius: 6px;
+    outline: none;
+  }
+  #searchInput:focus {
+    border-color: #c9a227;
+  }
+  .search-icon {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    pointer-events: none;
+  }
+  .grid {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+  }
+  .card {
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 6px;
+    padding: 16px;
+    transition: border-color 0.2s;
+  }
+  .card:hover {
+    border-color: #c9a227;
+  }
+  .card h3 {
+    margin: 0 0 6px;
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .card p {
+    margin: 0;
+    color: #999;
+    font-size: 13px;
+  }
+  .card .price {
+    color: #c9a227;
+    margin-top: 8px;
+    font-weight: 600;
+  }
+  .no-results {
+    text-align: center;
+    color: #777;
+    grid-column: 1 / -1;
+    padding: 40px 0;
+  }
+</style>
+</head>
+<body>
+
+  <div class="search-wrap">
+    <input type="text" id="searchInput" placeholder="Rechercher un article (ex : manteau, chemise...)">
+    <span class="search-icon">🔍</span>
+  </div>
+
+  <div class="grid" id="results"></div>
+
+  <script>
+    // Replace this array with your real product data,
+    // or fetch it from an API / database.
+    const products = [
+      { name: "Manteau Laine Noir", category: "Manteaux", price: "€480" },
+      { name: "Chemise Popeline Blanche", category: "Chemises", price: "€145" },
+      { name: "Pantalon Tailleur Anthracite", category: "Pantalons", price: "€210" },
+      { name: "Robe Soie Onyx", category: "Robes", price: "€390" },
+      { name: "Blazer Croisé Marine", category: "Vestes", price: "€520" },
+      { name: "Pull Cachemire Gris", category: "Pulls", price: "€310" },
+      { name: "Jean Droit Brut", category: "Pantalons", price: "€165" },
+      { name: "Trench Beige Classique", category: "Manteaux", price: "€450" }
+    ];
+
+    const input = document.getElementById('searchInput');
+    const resultsEl = document.getElementById('results');
+
+    function renderProducts(list) {
+      resultsEl.innerHTML = '';
+      if (list.length === 0) {
+        resultsEl.innerHTML = '<p class="no-results">Aucun article trouvé.</p>';
+        return;
+      }
+      list.forEach(p => {
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.innerHTML = `
+          <h3>${p.name}</h3>
+          <p>${p.category}</p>
+          <div class="price">${p.price}</div>
+        `;
+        resultsEl.appendChild(card);
+      });
+    }
+
+    function filterProducts(query) {
+      const q = query.trim().toLowerCase();
+      if (!q) return products;
+      return products.filter(p =>
+        p.name.toLowerCase().includes(q) ||
+        p.category.toLowerCase().includes(q)
+      );
+    }
+
+    input.addEventListener('input', (e) => {
+      renderProducts(filterProducts(e.target.value));
+    });
+
+    // Initial render
+    renderProducts(products);
+  </script>
+
+</body>
+</html>
