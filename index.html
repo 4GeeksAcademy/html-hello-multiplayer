@@ -23,10 +23,14 @@
     <meta name="twitter:description" content="Timeless elegance: French haute couture for the Summer Season.">
     <meta name="twitter:image" content="https://www.onyx-paris.com/assets/og-image.svg">
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap">
+    <link
+        rel="preload"
+        as="image"
+        href="assets/optimized/hero-summer-2026-960.webp"
+        imagesrcset="assets/optimized/hero-summer-2026-640.webp 640w, assets/optimized/hero-summer-2026-960.webp 960w, assets/optimized/hero-summer-2026-1280.webp 1280w"
+        imagesizes="100vw"
+        fetchpriority="high"
+    >
 
     <!-- Styles -->
     <link rel="stylesheet" href="output.css">
@@ -237,13 +241,20 @@
     <header class="navbar">
         <div class="nav-content container-page">
             <a href="/" class="nav-logo" aria-label="Onyx homepage">
-                <img
-                    src="ONYX_sin_fondo_en_blanco-removebg-preview.png"
-                    alt="Logo de Onyx, marca francesa de ropa de lujo con identidad elegante y atemporal"
-                    width="180"
-                    height="60"
-                    decoding="async"
-                >
+                <picture>
+                    <source
+                        type="image/webp"
+                        srcset="assets/optimized/onyx-logo-120.webp 120w"
+                        sizes="60px"
+                    >
+                    <img
+                        src="ONYX_sin_fondo_en_blanco-removebg-preview.png"
+                        alt="Logo de Onyx, marca francesa de ropa de lujo con identidad elegante y atemporal"
+                        width="120"
+                        height="80"
+                        decoding="async"
+                    >
+                </picture>
             </a>
 
             <form role="search" class="search-form" action="/search" method="get">
@@ -281,15 +292,23 @@
     <main id="main-content">
 
         <section class="hero-section" aria-label="Summer Collection">
-            <img
-                src="Hero picture Summer Season 2026 Onyx men and women.png"
-                alt="Modelo y modelo femenina luciendo la coleccion Summer Season 2026 de Onyx en un patio parisino iluminado, con prendas de lujo de lino y seda de estilo haute couture"
-                width="1920"
-                height="1080"
-                fetchpriority="high"
-                decoding="async"
-                class="hero-image"
-            >
+            <picture>
+                <source
+                    type="image/webp"
+                    srcset="assets/optimized/hero-summer-2026-640.webp 640w, assets/optimized/hero-summer-2026-960.webp 960w, assets/optimized/hero-summer-2026-1280.webp 1280w"
+                    sizes="100vw"
+                >
+                <img
+                    src="Hero picture Summer Season 2026 Onyx men and women.png"
+                    alt="Modelo y modelo femenina luciendo la coleccion Summer Season 2026 de Onyx en un patio parisino iluminado, con prendas de lujo de lino y seda de estilo haute couture"
+                    width="1672"
+                    height="941"
+                    fetchpriority="high"
+                    loading="eager"
+                    decoding="async"
+                    class="hero-image"
+                >
+            </picture>
             <div class="hero-content">
                 <h1>Summer Season 2026</h1>
                 <p class="hero-tagline">Timeless Elegance: French Haute Couture for the Summer Season.</p>
@@ -304,15 +323,22 @@
 
                 <article class="product-card" itemscope itemtype="https://schema.org/Product">
                     <a href="/product/signature-linen-shirt" class="home-product-media-link" aria-label="View Signature Linen Shirt details">
-                        <img
-                            src="assets/NS mens premium tshirt.png"
-                            alt="Men's ivory linen shirt with rolled sleeves and a refined tailored fit"
-                            width="600"
-                            height="750"
-                            loading="lazy"
-                            decoding="async"
-                            itemprop="image"
-                        >
+                        <picture>
+                            <source
+                                type="image/webp"
+                                srcset="assets/optimized/new-arrival-linen-shirt-240.webp 240w, assets/optimized/new-arrival-linen-shirt-400.webp 400w"
+                                sizes="(max-width: 1024px) 45vw, 194px"
+                            >
+                            <img
+                                src="assets/NS mens premium tshirt.png"
+                                alt="Men's ivory linen shirt with rolled sleeves and a refined tailored fit"
+                                width="400"
+                                height="500"
+                                loading="lazy"
+                                decoding="async"
+                                itemprop="image"
+                            >
+                        </picture>
                     </a>
                     <h3><a href="/product/signature-linen-shirt" class="home-product-title-link" itemprop="name">Signature Linen Shirt</a></h3>
                     <p class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
@@ -324,15 +350,22 @@
 
                 <article class="product-card" itemscope itemtype="https://schema.org/Product">
                     <a href="/product/tailored-summer-trousers" class="home-product-media-link" aria-label="View Tailored Summer Trousers details">
-                        <img
-                            src="assets/NS  mens premium trousers.png"
-                            alt="Men's tailored beige linen trousers with front pleats and a cropped ankle fit"
-                            width="600"
-                            height="750"
-                            loading="lazy"
-                            decoding="async"
-                            itemprop="image"
-                        >
+                        <picture>
+                            <source
+                                type="image/webp"
+                                srcset="assets/optimized/new-arrival-trousers-240.webp 240w, assets/optimized/new-arrival-trousers-400.webp 400w"
+                                sizes="(max-width: 1024px) 45vw, 194px"
+                            >
+                            <img
+                                src="assets/NS  mens premium trousers.png"
+                                alt="Men's tailored beige linen trousers with front pleats and a cropped ankle fit"
+                                width="400"
+                                height="500"
+                                loading="lazy"
+                                decoding="async"
+                                itemprop="image"
+                            >
+                        </picture>
                     </a>
                     <h3><a href="/product/tailored-summer-trousers" class="home-product-title-link" itemprop="name">Tailored Summer Trousers</a></h3>
                     <p class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
@@ -344,15 +377,22 @@
 
                 <article class="product-card" itemscope itemtype="https://schema.org/Product">
                     <a href="/product/sage-satin-dress" class="home-product-media-link" aria-label="View Sage Satin Dress details">
-                        <img
-                            src="assets/NS women summer dress.png"
-                            alt="Women's sage green satin summer dress with a flowing midi skirt and wrap waist"
-                            width="600"
-                            height="750"
-                            loading="lazy"
-                            decoding="async"
-                            itemprop="image"
-                        >
+                        <picture>
+                            <source
+                                type="image/webp"
+                                srcset="assets/optimized/new-arrival-dress-240.webp 240w, assets/optimized/new-arrival-dress-400.webp 400w"
+                                sizes="(max-width: 1024px) 45vw, 194px"
+                            >
+                            <img
+                                src="assets/NS women summer dress.png"
+                                alt="Women's sage green satin summer dress with a flowing midi skirt and wrap waist"
+                                width="400"
+                                height="500"
+                                loading="lazy"
+                                decoding="async"
+                                itemprop="image"
+                            >
+                        </picture>
                     </a>
                     <h3><a href="/product/sage-satin-dress" class="home-product-title-link" itemprop="name">Sage Satin Dress</a></h3>
                     <p class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
@@ -364,15 +404,22 @@
 
                 <article class="product-card" itemscope itemtype="https://schema.org/Product">
                     <a href="/product/riviera-straw-hat" class="home-product-media-link" aria-label="View Riviera Straw Hat details">
-                        <img
-                            src="assets/NS womens Sun Hat BG good.png"
-                            alt="Women's woven straw sun hat with a wide brim and black ribbon band"
-                            width="600"
-                            height="750"
-                            loading="lazy"
-                            decoding="async"
-                            itemprop="image"
-                        >
+                        <picture>
+                            <source
+                                type="image/webp"
+                                srcset="assets/optimized/new-arrival-hat-240.webp 240w, assets/optimized/new-arrival-hat-400.webp 400w"
+                                sizes="(max-width: 1024px) 45vw, 194px"
+                            >
+                            <img
+                                src="assets/NS womens Sun Hat BG good.png"
+                                alt="Women's woven straw sun hat with a wide brim and black ribbon band"
+                                width="400"
+                                height="500"
+                                loading="lazy"
+                                decoding="async"
+                                itemprop="image"
+                            >
+                        </picture>
                     </a>
                     <h3><a href="/product/riviera-straw-hat" class="home-product-title-link" itemprop="name">Riviera Straw Hat</a></h3>
                     <p class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
@@ -396,15 +443,22 @@
 
                 <article class="product-card" itemscope itemtype="https://schema.org/Product">
                     <a href="/product/resort-linen-shirt" class="home-product-media-link" aria-label="View Resort Linen Shirt details">
-                        <img
-                            src="assets/Top Sales men shirt lino.jpg"
-                            alt="Men's taupe linen shirt with an open collar and relaxed tailored fit"
-                            width="600"
-                            height="750"
-                            loading="lazy"
-                            decoding="async"
-                            itemprop="image"
-                        >
+                        <picture>
+                            <source
+                                type="image/webp"
+                                srcset="assets/optimized/top-seller-men-shirt-240.webp 240w, assets/optimized/top-seller-men-shirt-400.webp 400w"
+                                sizes="(max-width: 1024px) 45vw, 194px"
+                            >
+                            <img
+                                src="assets/Top Sales men shirt lino.jpg"
+                                alt="Men's taupe linen shirt with an open collar and relaxed tailored fit"
+                                width="400"
+                                height="500"
+                                loading="lazy"
+                                decoding="async"
+                                itemprop="image"
+                            >
+                        </picture>
                     </a>
                     <h3><a href="/product/resort-linen-shirt" class="home-product-title-link" itemprop="name">Resort Linen Shirt</a></h3>
                     <p class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
@@ -416,15 +470,22 @@
 
                 <article class="product-card" itemscope itemtype="https://schema.org/Product">
                     <a href="/product/scarlet-evening-dress" class="home-product-media-link" aria-label="View Scarlet Evening Dress details">
-                        <img
-                            src="assets/Top Sales woman red dress.jpg"
-                            alt="Women's fitted red cocktail dress with a square neckline and asymmetrical hem"
-                            width="600"
-                            height="750"
-                            loading="lazy"
-                            decoding="async"
-                            itemprop="image"
-                        >
+                        <picture>
+                            <source
+                                type="image/webp"
+                                srcset="assets/optimized/top-seller-red-dress-240.webp 240w, assets/optimized/top-seller-red-dress-400.webp 400w"
+                                sizes="(max-width: 1024px) 45vw, 194px"
+                            >
+                            <img
+                                src="assets/Top Sales woman red dress.jpg"
+                                alt="Women's fitted red cocktail dress with a square neckline and asymmetrical hem"
+                                width="400"
+                                height="500"
+                                loading="lazy"
+                                decoding="async"
+                                itemprop="image"
+                            >
+                        </picture>
                     </a>
                     <h3><a href="/product/scarlet-evening-dress" class="home-product-title-link" itemprop="name">Scarlet Evening Dress</a></h3>
                     <p class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
@@ -436,15 +497,22 @@
 
                 <article class="product-card" itemscope itemtype="https://schema.org/Product">
                     <a href="/product/artisan-leather-sandals" class="home-product-media-link" aria-label="View Artisan Leather Sandals details">
-                        <img
-                            src="assets/Top Sales leather sandals.jpg"
-                            alt="Brown leather flat sandals with crossover straps and a buckle slingback"
-                            width="600"
-                            height="750"
-                            loading="lazy"
-                            decoding="async"
-                            itemprop="image"
-                        >
+                        <picture>
+                            <source
+                                type="image/webp"
+                                srcset="assets/optimized/top-seller-sandals-240.webp 240w, assets/optimized/top-seller-sandals-400.webp 400w"
+                                sizes="(max-width: 1024px) 45vw, 194px"
+                            >
+                            <img
+                                src="assets/Top Sales leather sandals.jpg"
+                                alt="Brown leather flat sandals with crossover straps and a buckle slingback"
+                                width="400"
+                                height="500"
+                                loading="lazy"
+                                decoding="async"
+                                itemprop="image"
+                            >
+                        </picture>
                     </a>
                     <h3><a href="/product/artisan-leather-sandals" class="home-product-title-link" itemprop="name">Artisan Leather Sandals</a></h3>
                     <p class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
@@ -456,15 +524,22 @@
 
                 <article class="product-card" itemscope itemtype="https://schema.org/Product">
                     <a href="/product/raffia-top-handle-bag" class="home-product-media-link" aria-label="View Raffia Top-Handle Bag details">
-                        <img
-                            src="assets/Top Sales rafia bag.jpg"
-                            alt="Structured raffia handbag with tan leather trim, top handle and gold clasp"
-                            width="600"
-                            height="750"
-                            loading="lazy"
-                            decoding="async"
-                            itemprop="image"
-                        >
+                        <picture>
+                            <source
+                                type="image/webp"
+                                srcset="assets/optimized/top-seller-rafia-bag-240.webp 240w, assets/optimized/top-seller-rafia-bag-400.webp 400w"
+                                sizes="(max-width: 1024px) 45vw, 194px"
+                            >
+                            <img
+                                src="assets/Top Sales rafia bag.jpg"
+                                alt="Structured raffia handbag with tan leather trim, top handle and gold clasp"
+                                width="400"
+                                height="500"
+                                loading="lazy"
+                                decoding="async"
+                                itemprop="image"
+                            >
+                        </picture>
                     </a>
                     <h3><a href="/product/raffia-top-handle-bag" class="home-product-title-link" itemprop="name">Raffia Top-Handle Bag</a></h3>
                     <p class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
