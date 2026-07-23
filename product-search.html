@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Onyx — Search</title>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ONYX | Checkout</title>
+    <title>Onyx — Search</title>
 
     <link rel="stylesheet" href="output.css">
 
@@ -12,354 +14,111 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap">
 </head>
-
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background: #0e0e0e;
+    color: #f5f5f5;
+    margin: 0;
+    padding: 40px 20px;
+  }
+  .search-wrap {
+    max-width: 600px;
+    margin: 0 auto 40px;
+    position: relative;
+  }
+  #searchInput {
+    width: 100%;
+    padding: 14px 44px 14px 18px;
+    font-size: 16px;
+    border: 1px solid #333;
+    background: #1a1a1a;
+    color: #fff;
+    border-radius: 6px;
+    outline: none;
+  }
+  #searchInput:focus {
+    border-color: #c9a227;
+  }
+  .search-icon {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    pointer-events: none;
+  }
+  .grid {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+  }
+  .card {
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 6px;
+    padding: 16px;
+    transition: border-color 0.2s;
+  }
+  .card:hover {
+    border-color: #c9a227;
+  }
+  .card h3 {
+    margin: 0 0 6px;
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .card p {
+    margin: 0;
+    color: #999;
+    font-size: 13px;
+  }
+  .card .price {
+    color: #c9a227;
+    margin-top: 8px;
+    font-weight: 600;
+  }
+  .no-results {
+    text-align: center;
+    color: #777;
+    grid-column: 1 / -1;
+    padding: 40px 0;
+  }
+</style>
+</head>
 <body>
-
-    <!-- ================= NAVBAR ================= -->
-
-    <header class="navbar">
-
-        <div class="container-page nav-content">
-
-            <a href="index.html" class="logo">
-              <img src="ONYX_sin_fondo_en_blanco-removebg-preview.png" alt="ONYX logo" class="h-30 w-30 object-contain">
-              <span class="logo-text"></span>
+   <header class="navbar">
+        <div class="nav-content container-page">
+            <a href="index.html" class="nav-logo" aria-label="Onyx homepage">
+                <img
+                    src="ONYX_sin_fondo_en_blanco-removebg-preview.png"
+                    alt="Onyx"
+                    width="234"
+                    height="144"
+                    style="display: block; width: auto; height: 6.3rem; max-width: none;"
+                >
             </a>
 
-            <nav aria-label="Main Navigation">
-
+            <nav aria-label="Main navigation">
                 <ul class="nav-links">
-
                     <li><a href="index.html">Home</a></li>
                     <li><a href="/">Catalog</a></li>
                     <li><a href="index-product.html">Products</a></li>
                     <li><a href="indexformulario.html">Cart</a></li>
                     <li><a href="product-search.html">Searcher</a></li>
-
                 </ul>
-
             </nav>
-
         </div>
-
     </header>
-
-    <!-- ================= MAIN ================= -->
-
-    <main class="container-page py-16">
-
-        <h1 class="mb-12 text-center">
-            Checkout
-        </h1>
-
-        <div class="grid-2">
-
-            <!-- ================= FORM ================= -->
-
-            <form class="card space-y-10">
-
-                <!-- PERSONAL INFORMATION -->
-
-                <section>
-
-                    <h2 class="section-title">
-                        Personal Information
-                    </h2>
-
-                    <div class="grid gap-6 md:grid-cols-2">
-
-                        <div>
-
-                            <label for="name">
-                                Full Name
-                                <span class="required">*</span>
-                            </label>
-
-                            <input
-                                id="name"
-                                name="name"
-                                type="text"
-                                placeholder="John Smith"
-                                autocomplete="name"
-                                required>
-
-                        </div>
-
-                        <div>
-
-                            <label for="email">
-                                Email
-                                <span class="required">*</span>
-                            </label>
-
-                            <input
-                                id="email"
-                                name="email"
-                                type="email"
-                                placeholder="john@email.com"
-                                autocomplete="email"
-                                required>
-
-                        </div>
-
-                        <div class="md:col-span-2">
-
-                            <label for="phone">
-                                Phone Number
-                                <span class="required">*</span>
-                            </label>
-
-                            <input
-                                id="phone"
-                                name="phone"
-                                type="tel"
-                                placeholder="+34 600 123 456"
-                                autocomplete="tel"
-                                required>
-
-                        </div>
-
-                    </div>
-
-                </section>
-
-                <!-- DELIVERY ADDRESS -->
-
-                <section>
-
-                    <h2 class="section-title">
-                        Delivery Address
-                    </h2>
-
-                    <div class="space-y-6">
-
-                        <div>
-
-                            <label for="street">
-                                Street Address
-                                <span class="required">*</span>
-                            </label>
-
-                            <input
-                                id="street"
-                                name="street"
-                                type="text"
-                                placeholder="123 Oxford Street"
-                                autocomplete="street-address"
-                                required>
-
-                        </div>
-
-                        <div class="grid gap-6 md:grid-cols-3">
-
-                            <div>
-
-                                <label for="city">
-                                    City
-                                    <span class="required">*</span>
-                                </label>
-
-                                <input
-                                    id="city"
-                                    name="city"
-                                    type="text"
-                                    placeholder="London"
-                                    autocomplete="address-level2"
-                                    required>
-
-                            </div>
-
-                            <div>
-
-                                <label for="postcode">
-                                    Postal Code
-                                </label>
-
-                                <input
-                                    id="postcode"
-                                    name="postcode"
-                                    type="text"
-                                    placeholder="SW1A 1AA"
-                                    autocomplete="postal-code">
-
-                            </div>
-
-                            <div>
-
-                                <label for="country">
-                                    Country
-                                    <span class="required">*</span>
-                                </label>
-
-                                <select
-                                    id="country"
-                                    name="country"
-                                    autocomplete="country"
-                                    required>
-
-                                    <option value="">
-                                        Select your country
-                                    </option>
-
-                                    <option>Spain</option>
-                                    <option>France</option>
-                                    <option>Italy</option>
-                                    <option>Portugal</option>
-                                    <option>United Kingdom</option>
-
-                                </select>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </section>
-
-                <!-- PAYMENT -->
-
-                <section>
-
-                    <h2 class="section-title">
-                        Card Payment
-                    </h2>
-
-                    <div class="space-y-6">
-
-                        <div>
-
-                            <label for="card">
-                                Card Number
-                                <span class="required">*</span>
-                            </label>
-
-                            <input
-                                id="card"
-                                name="card"
-                                type="text"
-                                placeholder="1234 5678 9012 3456"
-                                autocomplete="cc-number"
-                                required>
-
-                        </div>
-
-                        <div class="grid gap-6 md:grid-cols-2">
-
-                            <div>
-
-                                <label for="expiry">
-                                    Expiration Date
-                                    <span class="required">*</span>
-                                </label>
-
-                                <input
-                                    id="expiry"
-                                    name="expiry"
-                                    type="month"
-                                    autocomplete="cc-exp"
-                                    required>
-
-                            </div>
-
-                            <div>
-
-                                <label for="cvv">
-                                    CVV
-                                    <span class="required">*</span>
-                                </label>
-
-                                <input
-                                    id="cvv"
-                                    name="cvv"
-                                    type="password"
-                                    placeholder="123"
-                                    maxlength="4"
-                                    autocomplete="cc-csc"
-                                    required>
-
-                            </div>
-
-                        </div>
-
-                        <div>
-
-                            <label for="holder">
-                                Cardholder Name
-                                <span class="required">*</span>
-                            </label>
-
-                            <input
-                                id="holder"
-                                name="holder"
-                                type="text"
-                                placeholder="John Smith"
-                                autocomplete="cc-name"
-                                required>
-
-                        </div>
-
-                    </div>
-
-                </section>
-
-                <p class="required-text">
-                    * Required fields
-                </p>
-
-                <button
-                    class="btn-primary"
-                    type="submit">
-
-                    Complete Order
-
-                </button>
-
-            </form>
-
-            <!-- ================= ORDER SUMMARY ================= -->
-
-            <aside class="summary">
-
-                <h2 class="section-title">
-                    Order Summary
-                </h2>
-
-                <div class="space-y-5">
-
-                    <div class="flex justify-between">
-                        <span>Premium Necklace</span>
-                        <span>€149</span>
-                    </div>
-
-                    <div class="flex justify-between">
-                        <span>White and black shoes</span>
-                        <span>€170</span>
-                    </div>
-
-                    <div class="flex justify-between">
-                        <span>Shipping</span>
-                        <span>Free</span>
-                    </div>
-
-                    <hr class="border-gray-700">
-
-                    <div class="flex justify-between text-lg font-semibold">
-
-                        <span>Total</span>
-                        <span>€319</span>
-
-                    </div>
-
-                </div>
-
-            </aside>
-
-        </div>
-
-    </main>
-
-    <!-- ================= FOOTER ================= -->
+  <div class="search-wrap">
+    <input type="text" id="searchInput" placeholder="Search for an article (ex : Trousers, Shirt...)">
+    <span class="search-icon">🔍</span>
+  </div>
+
+  <div class="grid" id="results"></div>
 
     <footer class="footer">
         <div class="container-page py-16">
@@ -563,7 +322,56 @@
     }
     </script>
 
+  <script>
+  
+    const products = [
+      { name: "Signature Linen Shirt", category: "Shirts", price: "€245" },
+      { name: "Tailored Summer Trousers", category: "Trousers", price: "€320" },
+      { name: "Sage Satin Dress", category: "Dresses", price: "€480" },
+      { name: "Riviera Straw Hat", category: "Hats", price: "€165" },
+      { name: "Resort Linen Shirt", category: "Shirts", price: "€365" },
+      { name: "Scarlet Evening Dress", category: "Dresses", price: "€620" },
+      { name: "Artisan Leather Sandals", category: "Shoes", price: "€590" },
+      { name: "Raffia Top-Handle Bag", category: "Bags", price: "€890" }
+    ];
+
+    const input = document.getElementById('searchInput');
+    const resultsEl = document.getElementById('results');
+
+    function renderProducts(list) {
+      resultsEl.innerHTML = '';
+      if (list.length === 0) {
+        resultsEl.innerHTML = '<p class="no-results">Aucun article trouvé.</p>';
+        return;
+      }
+      list.forEach(p => {
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.innerHTML = `
+          <h3>${p.name}</h3>
+          <p>${p.category}</p>
+          <div class="price">${p.price}</div>
+        `;
+        resultsEl.appendChild(card);
+      });
+    }
+
+    function filterProducts(query) {
+      const q = query.trim().toLowerCase();
+      if (!q) return products;
+      return products.filter(p =>
+        p.name.toLowerCase().includes(q) ||
+        p.category.toLowerCase().includes(q)
+      );
+    }
+
+    input.addEventListener('input', (e) => {
+      renderProducts(filterProducts(e.target.value));
+    });
+
+    // Initial render
+    renderProducts(products);
+  </script>
 
 </body>
-
 </html>
