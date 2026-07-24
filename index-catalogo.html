@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Catálogo | Maison Atelier</title>
+		<meta
+			name="description"
+			content="Descubre el catálogo de Maison Atelier: abrigos, camisas y pantalones con diseño francés minimalista, elegante y atemporal."
+		/>
+		<meta name="robots" content="index,follow" />
+		<meta
+			name="keywords"
+			content="catálogo ropa francesa, abrigos mujer, camisas premium, pantalones elegantes, moda minimalista"
+		/>
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Catálogo | Maison Atelier" />
+		<meta
+			property="og:description"
+			content="Explora una selección de prendas premium con inspiración parisina."
+		/>
+		<meta property="og:locale" content="es_ES" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="Catálogo | Maison Atelier" />
+		<meta
+			name="twitter:description"
+			content="Moda francesa minimalista con acabados premium para cada temporada."
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "CollectionPage",
+				"name": "Catálogo Maison Atelier",
+				"description": "Colección de prendas premium: abrigos, camisas y pantalones.",
+				"inLanguage": "es",
+				"mainEntity": {
+					"@type": "ItemList",
+					"name": "Listado de productos"
+				}
+			}
+		</script>
+	</head>
+	<body
+		class="catalog min-h-screen bg-gradient-to-b from-stone-50 via-neutral-50 to-amber-50/40 text-neutral-900 antialiased"
+	>
+		<header class="catalog__header border-b border-neutral-200/80 bg-white/80 backdrop-blur-sm">
+			<nav
+				class="catalog__navbar mx-auto flex w-full max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8"
+				aria-label="Navegacion principal"
+			>
+				<a
+					href="#"
+					class="catalog__brand font-['Cormorant_Garamond',Georgia,serif] text-2xl font-semibold tracking-wide text-neutral-900"
+					aria-label="Maison Atelier inicio"
+				>
+					Maison Atelier
+				</a>
+				<ul
+					class="catalog__nav-links hidden items-center gap-6 font-['Manrope',ui-sans-serif,sans-serif] text-sm font-medium text-neutral-700 md:flex"
+				>
+					<li><a href="#" class="transition-colors hover:text-neutral-900">Mujer</a></li>
+					<li><a href="#" class="transition-colors hover:text-neutral-900">Hombre</a></li>
+					<li><a href="#" class="transition-colors hover:text-neutral-900">Novedades</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main class="catalog__main mx-auto w-full max-w-7xl px-4 py-8 sm:px-6 lg:px-8 lg:py-12">
+			<section class="catalog__hero mb-8 lg:mb-10" aria-labelledby="catalog-title">
+				<p
+					class="catalog__eyebrow mb-2 font-['Manrope',ui-sans-serif,sans-serif] text-xs font-semibold uppercase tracking-[0.18em] text-neutral-500"
+				>
+					Coleccion permanente
+				</p>
+				<h1
+					id="catalog-title"
+					class="catalog__title max-w-3xl font-['Cormorant_Garamond',Georgia,serif] text-4xl font-semibold leading-tight tracking-tight text-neutral-900 sm:text-5xl"
+				>
+					Catalogo de prendas atemporales con esencia parisina
+				</h1>
+				<p
+					class="catalog__subtitle mt-3 max-w-2xl font-['Manrope',ui-sans-serif,sans-serif] text-sm leading-relaxed text-neutral-600 sm:text-base"
+				>
+					Selecciona categoria y talla para explorar piezas confeccionadas con materiales premium y una
+					silueta minimalista.
+				</p>
+			</section>
+
+			<section
+				class="catalog__filters mb-8 rounded-2xl border border-neutral-200 bg-white/90 p-4 shadow-sm sm:p-6"
+				aria-labelledby="filters-title"
+			>
+				<h2
+					id="filters-title"
+					class="catalog__filters-title mb-4 font-['Manrope',ui-sans-serif,sans-serif] text-sm font-semibold uppercase tracking-[0.12em] text-neutral-700"
+				>
+					Filtros
+				</h2>
+
+				<form
+					class="catalog__filters-form grid grid-cols-1 gap-4 md:grid-cols-2"
+					action="#"
+					method="get"
+				>
+					<fieldset class="catalog__filter-group space-y-2">
+						<legend
+							class="catalog__filter-label font-['Manrope',ui-sans-serif,sans-serif] text-sm font-medium text-neutral-700"
+						>
+							Categoria
+						</legend>
+						<label for="category" class="sr-only">Seleccionar categoria</label>
+						<select
+							id="category"
+							name="category"
+							class="catalog__filter-control w-full rounded-xl border border-neutral-300 bg-white px-4 py-3 font-['Manrope',ui-sans-serif,sans-serif] text-sm text-neutral-800 outline-none transition focus:border-neutral-500 focus:ring-2 focus:ring-neutral-300"
+						>
+							<option value="all">Todas las categorias</option>
+							<option value="abrigos">Abrigos</option>
+							<option value="camisas">Camisas</option>
+							<option value="pantalones">Pantalones</option>
+						</select>
+					</fieldset>
+
+					<fieldset class="catalog__filter-group space-y-2">
+						<legend
+							class="catalog__filter-label font-['Manrope',ui-sans-serif,sans-serif] text-sm font-medium text-neutral-700"
+						>
+							Talla
+						</legend>
+						<label for="size" class="sr-only">Seleccionar talla</label>
+						<select
+							id="size"
+							name="size"
+							class="catalog__filter-control w-full rounded-xl border border-neutral-300 bg-white px-4 py-3 font-['Manrope',ui-sans-serif,sans-serif] text-sm text-neutral-800 outline-none transition focus:border-neutral-500 focus:ring-2 focus:ring-neutral-300"
+						>
+							<option value="all">Todas las tallas</option>
+							<option value="xs">XS</option>
+							<option value="s">S</option>
+							<option value="m">M</option>
+							<option value="l">L</option>
+							<option value="xl">XL</option>
+						</select>
+					</fieldset>
+				</form>
+			</section>
+
+			<section class="catalog__listing" aria-labelledby="listing-title">
+				<div class="catalog__listing-header mb-5 flex items-end justify-between gap-4">
+					<h2
+						id="listing-title"
+						class="catalog__listing-title font-['Cormorant_Garamond',Georgia,serif] text-3xl font-medium tracking-tight text-neutral-900"
+					>
+						Productos destacados
+					</h2>
+					<p
+						class="catalog__listing-count font-['Manrope',ui-sans-serif,sans-serif] text-xs font-medium uppercase tracking-[0.1em] text-neutral-500"
+					>
+						20 resultados
+					</p>
+				</div>
+
+				<div class="catalog__grid grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+					<!-- INICIO LOOP DINAMICO: aqui el equipo debe iterar/renderizar las 20 tarjetas de producto -->
+					<article
+						class="catalog__product-card group flex h-full flex-col overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg"
+					>
+						<figure class="catalog__product-media relative overflow-hidden bg-neutral-100">
+							<img
+								src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80"
+								alt="Abrigo de lana premium color camel"
+								loading="lazy"
+								class="catalog__product-image h-72 w-full object-cover transition duration-500 group-hover:scale-105"
+							/>
+						</figure>
+
+						<div class="catalog__product-content flex flex-1 flex-col gap-3 p-4">
+							<p
+								class="catalog__product-category font-['Manrope',ui-sans-serif,sans-serif] text-[11px] font-semibold uppercase tracking-[0.14em] text-neutral-500"
+							>
+								Abrigos
+							</p>
+
+							<h3
+								class="catalog__product-name font-['Cormorant_Garamond',Georgia,serif] text-2xl font-semibold leading-tight text-neutral-900"
+							>
+								Abrigo Lumiere
+							</h3>
+
+							<p
+								class="catalog__product-description font-['Manrope',ui-sans-serif,sans-serif] text-sm leading-relaxed text-neutral-600"
+							>
+								Corte recto, lana merino y forro satinado para una silueta elegante en temporada fria.
+							</p>
+
+							<div class="catalog__product-meta mt-auto flex items-center justify-between">
+								<p
+									class="catalog__product-price font-['Manrope',ui-sans-serif,sans-serif] text-base font-semibold text-neutral-900"
+								>
+									EUR 289
+								</p>
+								<span
+									class="catalog__product-size rounded-full bg-neutral-100 px-3 py-1 font-['Manrope',ui-sans-serif,sans-serif] text-xs font-medium text-neutral-700"
+								>
+									Talla M
+								</span>
+							</div>
+
+							<button
+								type="button"
+								class="catalog__product-cta mt-1 inline-flex items-center justify-center rounded-xl bg-neutral-900 px-4 py-2.5 font-['Manrope',ui-sans-serif,sans-serif] text-sm font-semibold text-white transition hover:bg-neutral-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-400"
+							>
+								Ver producto
+							</button>
+						</div>
+					</article>
+					<!-- FIN LOOP DINAMICO -->
+				</div>
+			</section>
+		</main>
+
+		<footer class="catalog__footer mt-10 border-t border-neutral-200 bg-white/90">
+			<div
+				class="catalog__footer-container mx-auto flex w-full max-w-7xl flex-col gap-2 px-4 py-6 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8"
+			>
+				<p class="catalog__footer-copy font-['Manrope',ui-sans-serif,sans-serif] text-xs text-neutral-500">
+					2026 Maison Atelier. Todos los derechos reservados.
+				</p>
+				<nav
+					class="catalog__footer-nav flex items-center gap-4 font-['Manrope',ui-sans-serif,sans-serif] text-xs text-neutral-500"
+					aria-label="Navegacion secundaria"
+				>
+					<a href="#" class="transition-colors hover:text-neutral-800">Envios</a>
+					<a href="#" class="transition-colors hover:text-neutral-800">Cambios</a>
+					<a href="#" class="transition-colors hover:text-neutral-800">Contacto</a>
+				</nav>
+			</div>
+		</footer>
+	</body>
+</html>
+    
