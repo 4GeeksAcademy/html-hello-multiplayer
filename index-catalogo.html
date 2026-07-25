@@ -3,29 +3,29 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Catalog | Onyx</title>
+		<title>Pre-Collection Summer 2026 | Onyx</title>
 		<meta
 			name="description"
-			content="Discover the Onyx catalog: pants, blouses, and bags with minimalist, elegant, and timeless design."
+			content="ONYX Pre-Collection Summer 2026: shoes, shirts, dresses, and accessories in an elegant and radiant proposal."
 		/>
 		<meta name="robots" content="index,follow" />
 		<meta
 			name="keywords"
-			content="women pants catalog, premium blouses, elegant bags, minimalist fashion, onyx clothing"
+			content="ONYX, pre-collection summer 2026, shoes, shirts, dresses, accessories"
 		/>
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content="Catalog | Onyx" />
+		<meta property="og:title" content="Pre-Collection Summer 2026 | Onyx" />
 		<meta
 			property="og:description"
-			content="Explore a selection of premium garments with Parisian inspiration."
+			content="Discover the ONYX Pre-Collection Summer 2026 with shoes, shirts, dresses, and accessories."
 		/>
 		<meta property="og:image" content="Logo%20Onyx%20marca%20ropa.png" />
 		<meta property="og:locale" content="en_US" />
 		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:title" content="Catalog | Onyx" />
+		<meta name="twitter:title" content="Pre-Collection Summer 2026 | Onyx" />
 		<meta
 			name="twitter:description"
-			content="Minimalist French fashion with premium finishes for every season."
+			content="ONYX Pre-Collection Summer 2026: pieces designed to shine at any hour."
 		/>
 		<meta name="twitter:image" content="Logo%20Onyx%20marca%20ropa.png" />
 		<link rel="stylesheet" href="output.css" />
@@ -40,8 +40,8 @@
 			{
 				"@context": "https://schema.org",
 				"@type": "CollectionPage",
-				"name": "Onyx Catalog",
-				"description": "Premium garment collection: pants, blouses, and bags.",
+				"name": "ONYX Pre-Collection Summer 2026",
+				"description": "Shoes, shirts, dresses, and accessories from the ONYX Pre-Collection Summer 2026.",
 				"inLanguage": "en",
 				"mainEntity": {
 					"@type": "ItemList",
@@ -77,88 +77,90 @@
 					<li><a href="#" class="transition-colors hover:text-neutral-900">Shop</a></li>
 					<li><a href="#" class="transition-colors hover:text-neutral-900">Collections</a></li>
 					<li><a href="#" class="transition-colors hover:text-neutral-900">Account</a></li>
-					<li><a href="#" class="transition-colors hover:text-neutral-900">Searcher</a></li>
+					<li><a href="#" class="transition-colors hover:text-neutral-900">Search</a></li>
 				</ul>
 			</nav>
 		</header>
 
 		<main class="catalog__main mx-auto w-full max-w-7xl px-4 py-8 sm:px-6 lg:px-8 lg:py-12">
-			<section class="catalog__hero mb-8 lg:mb-10" aria-labelledby="catalog-title">
-				<p
-					class="catalog__eyebrow mb-2 font-['Manrope',ui-sans-serif,sans-serif] text-xs font-semibold uppercase tracking-[0.18em] text-neutral-500"
-				>
-					Permanent Collection
-				</p>
+			<section class="catalog__hero mb-10 text-center lg:mb-12" aria-labelledby="catalog-title">
+				<img
+					src="Logo%20Onyx%20marca%20ropa.png"
+					alt="ONYX logo"
+					width="1152"
+					height="768"
+					class="catalog__hero-logo mx-auto mb-5 h-24 w-auto sm:h-28"
+				/>
 				<h1
 					id="catalog-title"
-					class="catalog__title max-w-3xl font-['Cormorant_Garamond',Georgia,serif] text-4xl font-semibold leading-tight tracking-tight text-neutral-900 sm:text-5xl"
+					class="catalog__title mx-auto max-w-4xl font-['Cormorant_Garamond',Georgia,serif] text-4xl font-semibold uppercase leading-tight tracking-[0.04em] text-neutral-900 sm:text-5xl"
 				>
-					Catalog of Timeless Pieces with a Parisian Essence
+					PRE-COLLECTION<br />SUMMER
 				</h1>
 				<p
-					class="catalog__subtitle mt-3 max-w-2xl font-['Manrope',ui-sans-serif,sans-serif] text-sm leading-relaxed text-neutral-600 sm:text-base"
+					class="catalog__subtitle mx-auto mt-4 max-w-3xl font-['Manrope',ui-sans-serif,sans-serif] text-sm leading-relaxed text-neutral-600 sm:text-base"
 				>
-					Select category and size to explore pieces crafted with premium materials and a minimalist
-					silhouette.
+					Designed to shine at any hour, the ONYX Summer 2026 Collection reinvents your seasonal
+					essentials. Move effortlessly from daytime elegance to the glamour of warm nights, or to a much
+					more relaxed vacation look.
 				</p>
 			</section>
 
 			<section
-				class="catalog__filters mb-8 rounded-2xl border border-neutral-200 bg-white/90 p-4 shadow-sm sm:p-6"
+				class="catalog__filters fixed bottom-6 right-6 z-40"
 				aria-labelledby="filters-title"
 			>
-				<h2
-					id="filters-title"
-					class="catalog__filters-title mb-4 font-['Manrope',ui-sans-serif,sans-serif] text-sm font-semibold uppercase tracking-[0.12em] text-neutral-700"
+				<h2 id="filters-title" class="sr-only">Filter by category</h2>
+				<button
+					id="toggle-category-filter"
+					type="button"
+					class="catalog__floating-filter-btn flex h-16 w-16 items-center justify-center rounded-sm bg-neutral-900 p-2 text-center font-['Manrope',ui-sans-serif,sans-serif] text-[11px] font-semibold uppercase tracking-[0.12em] text-white shadow-xl transition hover:bg-neutral-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-400"
+					aria-controls="floating-filter-panel"
+					aria-expanded="false"
 				>
-					Filters
-				</h2>
+					Filter
+				</button>
 
-				<form
-					class="catalog__filters-form grid grid-cols-1 gap-4 md:grid-cols-2"
-					action="#"
-					method="get"
+				<div
+					id="floating-filter-panel"
+					class="catalog__floating-filter-panel absolute bottom-20 right-0 hidden w-72 rounded-2xl border border-neutral-200 bg-white p-4 shadow-2xl"
 				>
-					<fieldset class="catalog__filter-group space-y-2">
-						<legend
-							class="catalog__filter-label font-['Manrope',ui-sans-serif,sans-serif] text-sm font-medium text-neutral-700"
+					<form class="catalog__filters-form space-y-4" action="#" method="get">
+						<label
+							for="category"
+							class="catalog__filter-label mb-2 block font-['Manrope',ui-sans-serif,sans-serif] text-xs font-semibold uppercase tracking-[0.1em] text-neutral-700"
 						>
 							Category
-						</legend>
-						<label for="category" class="sr-only">Select category</label>
+						</label>
 						<select
 							id="category"
 							name="category"
 							class="catalog__filter-control w-full rounded-xl border border-neutral-300 bg-white px-4 py-3 font-['Manrope',ui-sans-serif,sans-serif] text-sm text-neutral-800 outline-none transition focus:border-neutral-500 focus:ring-2 focus:ring-neutral-300"
 						>
 							<option value="all">All categories</option>
-							<option value="pants">Pants</option>
-							<option value="blouses">Blouses</option>
-							<option value="bags">Bags</option>
+							<option value="shoes">Shoes</option>
+							<option value="shirt">Shirt</option>
+							<option value="dress">Dress</option>
+							<option value="accessories">Accessories</option>
 						</select>
-					</fieldset>
 
-					<fieldset class="catalog__filter-group space-y-2">
-						<legend
-							class="catalog__filter-label font-['Manrope',ui-sans-serif,sans-serif] text-sm font-medium text-neutral-700"
-						>
-							Size
-						</legend>
-						<label for="size" class="sr-only">Select size</label>
-						<select
-							id="size"
-							name="size"
-							class="catalog__filter-control w-full rounded-xl border border-neutral-300 bg-white px-4 py-3 font-['Manrope',ui-sans-serif,sans-serif] text-sm text-neutral-800 outline-none transition focus:border-neutral-500 focus:ring-2 focus:ring-neutral-300"
-						>
-							<option value="all">All sizes</option>
-							<option value="xs">XS</option>
-							<option value="s">S</option>
-							<option value="m">M</option>
-							<option value="l">L</option>
-							<option value="xl">XL</option>
-						</select>
-					</fieldset>
-				</form>
+						<div>
+							<label
+								for="size"
+								class="catalog__filter-label mb-2 block font-['Manrope',ui-sans-serif,sans-serif] text-xs font-semibold uppercase tracking-[0.1em] text-neutral-700"
+							>
+								Size
+							</label>
+							<select
+								id="size"
+								name="size"
+								class="catalog__filter-control w-full rounded-xl border border-neutral-300 bg-white px-4 py-3 font-['Manrope',ui-sans-serif,sans-serif] text-sm text-neutral-800 outline-none transition focus:border-neutral-500 focus:ring-2 focus:ring-neutral-300"
+							>
+								<option value="all">All sizes</option>
+							</select>
+						</div>
+					</form>
+				</div>
 			</section>
 
 			<section class="catalog__listing" aria-labelledby="listing-title">
@@ -172,11 +174,11 @@
 					<p
 						class="catalog__listing-count font-['Manrope',ui-sans-serif,sans-serif] text-xs font-medium uppercase tracking-[0.1em] text-neutral-500"
 					>
-						20 results
+						4 results
 					</p>
 				</div>
 
-				<div id="catalog-grid" class="catalog__grid grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"></div>
+				<div id="catalog-grid" class="catalog__grid grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4"></div>
 			</section>
 		</main>
 
@@ -205,231 +207,58 @@
 		<script>
 			const catalogProducts = [
 				{
-					id: "pants-1",
-					name: "Tailored Wool Pants",
-					category: "pants",
-					categoryLabel: "Pants",
-					description: "High-waist wool pants with a clean tailored line for everyday elegance.",
-					price: "EUR 149",
-					size: "M",
-					image: "assets/catalog/pants/pants-1.jpg",
-					alt: "Woman wearing tailored wool pants"
-				},
-				{
-					id: "pants-2",
-					name: "Wide Leg Linen Pants",
-					category: "pants",
-					categoryLabel: "Pants",
-					description: "Lightweight linen pants with a flowing wide-leg silhouette.",
-					price: "EUR 129",
-					size: "S",
-					image: "assets/catalog/pants/pants-2.jpg",
-					alt: "Wide leg linen pants for women"
-				},
-				{
-					id: "pants-3",
-					name: "City Straight Pants",
-					category: "pants",
-					categoryLabel: "Pants",
-					description: "Straight-cut city pants designed for polished day-to-night outfits.",
-					price: "EUR 139",
-					size: "L",
-					image: "assets/catalog/pants/pants-3.jpg",
-					alt: "Straight pants styled in an urban outfit"
-				},
-				{
-					id: "pants-4",
-					name: "Pleated Classic Pants",
-					category: "pants",
-					categoryLabel: "Pants",
-					description: "Classic front pleats and soft structure for a refined profile.",
-					price: "EUR 159",
-					size: "M",
-					image: "assets/catalog/pants/pants-4.jpg",
-					alt: "Classic pleated pants in neutral tones"
-				},
-				{
-					id: "pants-5",
-					name: "Monochrome Slim Pants",
-					category: "pants",
-					categoryLabel: "Pants",
-					description: "Slim monochrome pants with stretch comfort and clean finishing.",
-					price: "EUR 119",
-					size: "XS",
-					image: "assets/catalog/pants/pants-5.jpg",
-					alt: "Slim fit monochrome women's pants"
-				},
-				{
-					id: "pants-6",
-					name: "Soft Drape Pants",
-					category: "pants",
-					categoryLabel: "Pants",
-					description: "Soft drape fabric and elastic back waist for elevated comfort.",
-					price: "EUR 125",
-					size: "XL",
-					image: "assets/catalog/pants/pants-6.jpg",
-					alt: "Flowy drape pants with elegant fall"
-				},
-				{
-					id: "pants-7",
-					name: "Studio Cropped Pants",
-					category: "pants",
-					categoryLabel: "Pants",
-					description: "Cropped ankle-length pants ideal for modern studio styling.",
-					price: "EUR 134",
-					size: "S",
-					image: "assets/catalog/pants/pants-7.jpg",
-					alt: "Cropped pants paired with minimalist top"
-				},
-				{
-					id: "pants-8",
-					name: "Evening Satin Pants",
-					category: "pants",
-					categoryLabel: "Pants",
-					description: "Satin texture and straight leg for an understated evening look.",
-					price: "EUR 169",
-					size: "L",
-					image: "assets/catalog/pants/pants-8.jpg",
-					alt: "Satin women's pants for evening wear"
-				},
-				{
-					id: "blouse-1",
-					name: "Silk Collar Blouse",
-					category: "blouses",
-					categoryLabel: "Blouses",
-					description: "Smooth silk blouse with a structured collar and elegant drape.",
+					id: "shoes-1",
+					name: "Leather Sandals",
+					category: "shoes",
+					categoryLabel: "Shoes",
+					description: "Leather sandals with crossover straps for elegant summer styling.",
 					price: "EUR 145",
-					size: "M",
-					image: "assets/catalog/blouses/blouse-1.jpg",
-					alt: "Silk blouse with structured collar"
+					sizes: ["36", "37", "38", "39", "40", "41"],
+					image: "Top%20Sales%20leather%20sandals.jpg",
+					alt: "Brown leather summer sandals"
 				},
 				{
-					id: "blouse-2",
-					name: "Essential White Blouse",
-					category: "blouses",
-					categoryLabel: "Blouses",
-					description: "Essential white blouse with soft lines and minimalist tailoring.",
-					price: "EUR 119",
-					size: "S",
-					image: "assets/catalog/blouses/blouse-2.jpg",
-					alt: "Minimalist white blouse for women"
+					id: "shirt-1",
+					name: "Linen T-Shirt",
+					category: "shirt",
+					categoryLabel: "Shirt",
+					description: "A light, fresh linen T-shirt for sunny days and seaside escapes.",
+					price: "EUR 95",
+					sizes: ["XS", "S", "M", "L", "XL"],
+					image: "Top%20sales%20men%20tshirt%20lino.jpg",
+					alt: "Men's linen T-shirt in a neutral tone"
 				},
 				{
-					id: "blouse-3",
-					name: "Pleat Front Blouse",
-					category: "blouses",
-					categoryLabel: "Blouses",
-					description: "Delicate front pleats and lightweight fabric for versatile dressing.",
-					price: "EUR 129",
-					size: "XS",
-					image: "assets/catalog/blouses/blouse-3.jpg",
-					alt: "Front pleat blouse in light fabric"
+					id: "dress-1",
+					name: "Red Summer Dress",
+					category: "dress",
+					categoryLabel: "Dress",
+					description: "A standout red dress designed for sunset events and summer evenings.",
+					price: "EUR 175",
+					sizes: ["XS", "S", "M", "L"],
+					image: "Top%20Sales%20woman%20red%20dress.jpg",
+					alt: "Women's red summer dress"
 				},
 				{
-					id: "blouse-4",
-					name: "Luxe Bow Blouse",
-					category: "blouses",
-					categoryLabel: "Blouses",
-					description: "Tie-neck bow detail with fluid construction for elegant movement.",
-					price: "EUR 154",
-					size: "L",
-					image: "assets/catalog/blouses/blouse-4.jpg",
-					alt: "Bow blouse with tie-neck detail"
-				},
-				{
-					id: "blouse-5",
-					name: "Soft Beige Blouse",
-					category: "blouses",
-					categoryLabel: "Blouses",
-					description: "Soft beige blouse with relaxed fit and premium stitching.",
-					price: "EUR 124",
-					size: "M",
-					image: "assets/catalog/blouses/blouse-5.jpg",
-					alt: "Beige women's blouse with relaxed fit"
-				},
-				{
-					id: "blouse-6",
-					name: "Satin Night Blouse",
-					category: "blouses",
-					categoryLabel: "Blouses",
-					description: "Satin finish blouse crafted for evening events and formal edits.",
-					price: "EUR 149",
-					size: "XL",
-					image: "assets/catalog/blouses/blouse-6.jpg",
-					alt: "Satin blouse styled for evening look"
-				},
-				{
-					id: "bag-1",
-					name: "Structured Leather Bag",
-					category: "bags",
-					categoryLabel: "Bags",
-					description: "Structured leather bag with metal hardware and clean geometry.",
-					price: "EUR 249",
-					size: "M",
-					image: "assets/catalog/bags/bag-1.jpg",
-					alt: "Structured leather handbag in neutral color"
-				},
-				{
-					id: "bag-2",
-					name: "Mini City Bag",
-					category: "bags",
-					categoryLabel: "Bags",
-					description: "Compact city bag with adjustable strap and premium detailing.",
-					price: "EUR 219",
-					size: "S",
-					image: "assets/catalog/bags/bag-2.jpg",
-					alt: "Small city handbag with shoulder strap"
-				},
-				{
-					id: "bag-3",
-					name: "Signature Tote Bag",
-					category: "bags",
-					categoryLabel: "Bags",
-					description: "Roomy tote silhouette with reinforced handles and modern shape.",
-					price: "EUR 279",
-					size: "L",
-					image: "assets/catalog/bags/bag-3.jpg",
-					alt: "Large tote bag for everyday essentials"
-				},
-				{
-					id: "bag-4",
-					name: "Evening Chain Bag",
-					category: "bags",
-					categoryLabel: "Bags",
-					description: "Elegant chain strap bag with polished finish for formal wear.",
-					price: "EUR 239",
-					size: "XS",
-					image: "assets/catalog/bags/bag-4.jpg",
-					alt: "Chain strap evening handbag"
-				},
-				{
-					id: "bag-5",
-					name: "Soft Hobo Bag",
-					category: "bags",
-					categoryLabel: "Bags",
-					description: "Soft hobo bag with curved silhouette and minimalist detailing.",
-					price: "EUR 229",
-					size: "M",
-					image: "assets/catalog/bags/bag-5.jpg",
-					alt: "Soft hobo style handbag"
-				},
-				{
-					id: "bag-6",
-					name: "Crossbody Travel Bag",
-					category: "bags",
-					categoryLabel: "Bags",
-					description: "Crossbody design with secure closure and lightweight structure.",
-					price: "EUR 199",
-					size: "XL",
-					image: "assets/catalog/bags/bag-6.jpg",
-					alt: "Women's crossbody travel bag"
+					id: "accessory-1",
+					name: "Raffia Bag",
+					category: "accessories",
+					categoryLabel: "Accessories",
+					description: "A lightweight raffia bag with an artisanal finish for a refined vacation silhouette.",
+					price: "EUR 120",
+					sizes: ["Compact", "Medium", "Large"],
+					image: "Tope%20Sales%20rafia%20bag.jpg",
+					alt: "Summer raffia bag"
 				}
 			];
 
 			const categorySelect = document.getElementById("category");
 			const sizeSelect = document.getElementById("size");
+			const filterToggleButton = document.getElementById("toggle-category-filter");
+			const floatingFilterPanel = document.getElementById("floating-filter-panel");
 			const gridElement = document.getElementById("catalog-grid");
 			const countElement = document.querySelector(".catalog__listing-count");
+			const availableSizes = [...new Set(catalogProducts.flatMap((product) => product.sizes))];
 
 			const productCardTemplate = (product) => `
 				<article class="catalog__product-card group flex h-full flex-col overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg">
@@ -438,6 +267,10 @@
 							src="${product.image}"
 							alt="${product.alt}"
 							loading="lazy"
+							decoding="async"
+							width="768"
+							height="1024"
+							sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
 							class="catalog__product-image h-72 w-full object-cover transition duration-500 group-hover:scale-105"
 						/>
 					</figure>
@@ -445,9 +278,10 @@
 						<p class="catalog__product-category font-['Manrope',ui-sans-serif,sans-serif] text-[11px] font-semibold uppercase tracking-[0.14em] text-neutral-500">${product.categoryLabel}</p>
 						<h3 class="catalog__product-name font-['Cormorant_Garamond',Georgia,serif] text-2xl font-semibold leading-tight text-neutral-900">${product.name}</h3>
 						<p class="catalog__product-description font-['Manrope',ui-sans-serif,sans-serif] text-sm leading-relaxed text-neutral-600">${product.description}</p>
+						<p class="catalog__product-sizes font-['Manrope',ui-sans-serif,sans-serif] text-xs font-medium uppercase tracking-[0.08em] text-neutral-500">Available sizes: ${product.sizes.join(" • ")}</p>
 						<div class="catalog__product-meta mt-auto flex items-center justify-between">
 							<p class="catalog__product-price font-['Manrope',ui-sans-serif,sans-serif] text-base font-semibold text-neutral-900">${product.price}</p>
-							<span class="catalog__product-size rounded-full bg-neutral-100 px-3 py-1 font-['Manrope',ui-sans-serif,sans-serif] text-xs font-medium text-neutral-700">Size ${product.size}</span>
+							<span class="catalog__product-size rounded-full bg-neutral-100 px-3 py-1 font-['Manrope',ui-sans-serif,sans-serif] text-xs font-medium text-neutral-700">Ref ${product.id.toUpperCase()}</span>
 						</div>
 						<button type="button" class="catalog__product-cta mt-1 inline-flex items-center justify-center rounded-xl bg-neutral-900 px-4 py-2.5 font-['Manrope',ui-sans-serif,sans-serif] text-sm font-semibold text-white transition hover:bg-neutral-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-400">View product</button>
 					</div>
@@ -458,14 +292,19 @@
 				countElement.textContent = `${amount} result${amount === 1 ? "" : "s"}`;
 			};
 
+			const populateSizeOptions = () => {
+				sizeSelect.innerHTML = ['<option value="all">All sizes</option>']
+					.concat(availableSizes.map((size) => `<option value="${size}">${size}</option>`))
+					.join("");
+			};
+
 			const filterProducts = () => {
 				const categoryValue = categorySelect.value;
 				const sizeValue = sizeSelect.value;
-
 				return catalogProducts.filter((product) => {
-					const categoryMatch = categoryValue === "all" || product.category === categoryValue;
-					const sizeMatch = sizeValue === "all" || product.size.toLowerCase() === sizeValue;
-					return categoryMatch && sizeMatch;
+					const matchesCategory = categoryValue === "all" || product.category === categoryValue;
+					const matchesSize = sizeValue === "all" || product.sizes.includes(sizeValue);
+					return matchesCategory && matchesSize;
 				});
 			};
 
@@ -475,8 +314,45 @@
 				updateResultsCount(filteredProducts.length);
 			};
 
-			categorySelect.addEventListener("change", renderProducts);
-			sizeSelect.addEventListener("change", renderProducts);
+			const setFloatingFilterState = (isOpen) => {
+				floatingFilterPanel.classList.toggle("hidden", !isOpen);
+				filterToggleButton.setAttribute("aria-expanded", String(isOpen));
+			};
+
+			categorySelect.addEventListener("change", () => {
+				renderProducts();
+				setFloatingFilterState(false);
+			});
+
+			sizeSelect.addEventListener("change", () => {
+				renderProducts();
+				setFloatingFilterState(false);
+			});
+
+			filterToggleButton.addEventListener("click", () => {
+				const isCurrentlyClosed = floatingFilterPanel.classList.contains("hidden");
+				setFloatingFilterState(isCurrentlyClosed);
+			});
+
+			document.addEventListener("click", (event) => {
+				if (floatingFilterPanel.classList.contains("hidden")) {
+					return;
+				}
+
+				const clickedInsidePanel = floatingFilterPanel.contains(event.target);
+				const clickedToggleButton = filterToggleButton.contains(event.target);
+				if (!clickedInsidePanel && !clickedToggleButton) {
+					setFloatingFilterState(false);
+				}
+			});
+
+			document.addEventListener("keydown", (event) => {
+				if (event.key === "Escape") {
+					setFloatingFilterState(false);
+				}
+			});
+
+			populateSizeOptions();
 			renderProducts();
 		</script>
 	</body>
