@@ -1,88 +1,52 @@
 <!doctype html>
 <html lang="en">
+	<!-- Head: metadata, title and external styles -->
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Pre-Collection Summer 2026 | Onyx</title>
-		<meta
-			name="description"
-			content="ONYX Pre-Collection Summer 2026: shoes, shirts, dresses, and accessories in an elegant and radiant proposal."
-		/>
-		<meta name="robots" content="index,follow" />
-		<meta
-			name="keywords"
-			content="ONYX, pre-collection summer 2026, shoes, shirts, dresses, accessories"
-		/>
-		<meta property="og:type" content="website" />
-		<meta property="og:title" content="Pre-Collection Summer 2026 | Onyx" />
-		<meta
-			property="og:description"
-			content="Discover the ONYX Pre-Collection Summer 2026 with shoes, shirts, dresses, and accessories."
-		/>
-		<meta property="og:image" content="Logo%20Onyx%20marca%20ropa.png" />
-		<meta property="og:locale" content="en_US" />
-		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:title" content="Pre-Collection Summer 2026 | Onyx" />
-		<meta
-			name="twitter:description"
-			content="ONYX Pre-Collection Summer 2026: pieces designed to shine at any hour."
-		/>
-		<meta name="twitter:image" content="Logo%20Onyx%20marca%20ropa.png" />
-		<link rel="stylesheet" href="output.css" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap"
-			rel="stylesheet"
-		/>
-		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-		<script type="application/ld+json">
-			{
-				"@context": "https://schema.org",
-				"@type": "CollectionPage",
-				"name": "ONYX Pre-Collection Summer 2026",
-				"description": "Shoes, shirts, dresses, and accessories from the ONYX Pre-Collection Summer 2026.",
-				"inLanguage": "en",
-				"mainEntity": {
-					"@type": "ItemList",
-					"name": "Product list"
-				}
-			}
-		</script>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>ONYX | Shopping Cart</title>
+		<link rel="stylesheet" href="output.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap">
 	</head>
+	<!-- Body: page shell -->
 	<body
 		class="catalog min-h-screen bg-gradient-to-b from-stone-50 via-neutral-50 to-amber-50/40 text-neutral-900 antialiased"
 	>
-		<header class="catalog__header border-b border-neutral-200/80 bg-white/80 backdrop-blur-sm">
-			<nav
-				class="catalog__navbar mx-auto flex w-full max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8"
-				aria-label="Main navigation"
-			>
-				<a
-					href="#"
-					class="catalog__brand inline-flex items-center gap-3 font-['Cormorant_Garamond',Georgia,serif] text-2xl font-semibold tracking-wide text-neutral-900"
-					aria-label="Onyx home"
-				>
-					<img
-						src="ONYX%20sin%20fondo.png"
-						alt="Onyx logo"
-						width="1152"
-						height="768"
-						class="catalog__brand-logo h-10 w-auto"
-					/>
+		<!-- Header: main navigation -->
+		<header class="navbar">
+
+			<div class="container-page nav-content">
+
+				<!-- Brand/logo -->
+				<a href="index.html" class="logo">
+					<img src="ONYX_sin_fondo_en_blanco-removebg-preview.png" alt="ONYX logo" class="h-30 w-30 object-contain">
+					<span class="logo-text"></span>
 				</a>
-				<ul
-					class="catalog__nav-links hidden items-center gap-6 font-['Manrope',ui-sans-serif,sans-serif] text-sm font-medium text-neutral-700 md:flex"
-				>
-					<li><a href="#" class="transition-colors hover:text-neutral-900">Shop</a></li>
-					<li><a href="#" class="transition-colors hover:text-neutral-900">Collections</a></li>
-					<li><a href="#" class="transition-colors hover:text-neutral-900">Account</a></li>
-					<li><a href="#" class="transition-colors hover:text-neutral-900">Search</a></li>
-				</ul>
-			</nav>
+
+				<!-- Main navigation links -->
+				<nav aria-label="Main Navigation">
+
+					<ul class="nav-links">
+
+						<li><a href="index.html">Home</a></li>
+						<li><a href="index-catalogo.html">Catalog</a></li>
+						<li><a href="index-product.html">Products</a></li>
+						<li><a href="cart.html">Cart</a></li>
+						<li><a href="product-search.html">Searcher</a></li>
+
+					</ul>
+
+				</nav>
+
+			</div>
+
 		</header>
 
+		<!-- Main content -->
 		<main class="catalog__main mx-auto w-full max-w-7xl px-4 py-8 sm:px-6 lg:px-8 lg:py-12">
+			<!-- Hero section -->
 			<section class="catalog__hero mb-10 text-center lg:mb-12" aria-labelledby="catalog-title">
 				<img
 					src="Logo%20Onyx%20marca%20ropa.png"
@@ -106,6 +70,7 @@
 				</p>
 			</section>
 
+			<!-- Floating filter panel -->
 			<section
 				class="catalog__filters fixed bottom-6 right-6 z-40"
 				aria-labelledby="filters-title"
@@ -164,6 +129,7 @@
 				</div>
 			</section>
 
+			<!-- Product listing -->
 			<section class="catalog__listing" aria-labelledby="listing-title">
 				<div class="catalog__listing-header mb-5 flex items-end justify-between gap-4">
 					<h2
@@ -175,7 +141,7 @@
 					<p
 						class="catalog__listing-count font-['Manrope',ui-sans-serif,sans-serif] text-xs font-medium uppercase tracking-[0.1em] text-neutral-500"
 					>
-						4 results
+						8 results
 					</p>
 				</div>
 
@@ -183,6 +149,7 @@
 			</section>
 		</main>
 
+		<!-- Footer -->
 		<footer class="catalog__footer mt-10 border-t border-neutral-200 bg-white/90">
 			<div
 				class="catalog__footer-container mx-auto flex w-full max-w-7xl flex-col gap-2 px-4 py-6 sm:px-6 lg:px-8"
@@ -205,7 +172,12 @@
 			</div>
 		</footer>
 
+		<!-- Tailwind runtime (needed for utility classes used in HTML) -->
+		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+		<!-- Catalog behavior: data, filtering and rendering -->
 		<script>
+			// Product dataset
 			const catalogProducts = [
 				{
 					id: "shoes-1",
@@ -305,6 +277,7 @@
 				}
 			];
 
+			// UI references
 			const categorySelect = document.getElementById("category");
 			const sizeSelect = document.getElementById("size");
 			const filterToggleButton = document.getElementById("toggle-category-filter");
@@ -320,6 +293,7 @@
 			];
 			const availableSizes = [...new Set(catalogProducts.flatMap((product) => product.sizes))];
 
+			// Templates and render helpers
 			const productCardTemplate = (product) => `
 				<article class="catalog__product-card group flex h-full flex-col overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg">
 					<figure class="catalog__product-media relative overflow-hidden bg-neutral-100">
@@ -394,6 +368,7 @@
 				filterToggleButton.setAttribute("aria-expanded", String(isOpen));
 			};
 
+			// Event bindings
 			categorySelect.addEventListener("change", () => {
 				renderProducts();
 				setFloatingFilterState(false);
@@ -427,6 +402,7 @@
 				}
 			});
 
+			// Initial render
 			populateCategoryOptions();
 			populateSizeOptions();
 			renderProducts();
