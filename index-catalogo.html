@@ -4,11 +4,116 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>ONYX | Shopping Cart</title>
+		<title>ONYX | Summer 2026 Catalog</title>
+		<meta
+			name="description"
+			content="Explore ONYX Summer 2026 pre-collection: curated shoes, shirts, pants, dresses and accessories with size filters and direct product access."
+		>
+		<meta name="robots" content="index, follow">
+		<meta name="theme-color" content="#171717">
+		<link rel="canonical" href="https://4geeksacademy.github.io/html-hello/index-catalogo.html">
+		<meta property="og:type" content="website">
+		<meta property="og:title" content="ONYX | Summer 2026 Catalog">
+		<meta
+			property="og:description"
+			content="Discover ONYX Summer 2026 looks and filter products by category and size."
+		>
+		<meta property="og:url" content="https://4geeksacademy.github.io/html-hello/index-catalogo.html">
+		<meta property="og:image" content="Logo%20Onyx%20marca%20ropa.png">
+		<meta property="og:locale" content="en_US">
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content="ONYX | Summer 2026 Catalog">
+		<meta
+			name="twitter:description"
+			content="Explore ONYX Summer 2026 products by category and size."
+		>
+		<meta name="twitter:image" content="Logo%20Onyx%20marca%20ropa.png">
 		<link rel="stylesheet" href="output.css">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap">
+		<link
+			rel="preload"
+			as="image"
+			href="Logo%20Onyx%20marca%20ropa.png"
+			imagesizes="(min-width: 1024px) 1152px, 100vw"
+		>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap"
+			media="print"
+			onload="this.media='all'"
+		>
+		<noscript>
+			<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap">
+		</noscript>
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "CollectionPage",
+				"name": "ONYX Summer 2026 Catalog",
+				"description": "Catalog page for ONYX Summer 2026 products.",
+				"inLanguage": "en",
+				"mainEntity": {
+					"@type": "ItemList",
+					"name": "ONYX Featured Products",
+					"numberOfItems": 8,
+					"itemListElement": [
+						{
+							"@type": "ListItem",
+							"position": 1,
+							"url": "product-leather-sandals.html",
+							"name": "Leather Sandals"
+						},
+						{
+							"@type": "ListItem",
+							"position": 2,
+							"url": "product-men-shirt-lino.html",
+							"name": "Linen T-Shirt"
+						},
+						{
+							"@type": "ListItem",
+							"position": 3,
+							"url": "product-men-t-shirt.html",
+							"name": "Premium Cotton Tee"
+						},
+						{
+							"@type": "ListItem",
+							"position": 4,
+							"url": "product-men-trousers.html",
+							"name": "Premium Summer Trousers"
+						},
+						{
+							"@type": "ListItem",
+							"position": 5,
+							"url": "product-woman-red-dress.html",
+							"name": "Red Summer Dress"
+						},
+						{
+							"@type": "ListItem",
+							"position": 6,
+							"url": "product-woman-dress.html",
+							"name": "Summer Breeze Dress"
+						},
+						{
+							"@type": "ListItem",
+							"position": 7,
+							"url": "product-rafia-bag.html",
+							"name": "Raffia Bag"
+						},
+						{
+							"@type": "ListItem",
+							"position": 8,
+							"url": "product-woman-sunhat.html",
+							"name": "Sun Hat"
+						}
+					]
+				},
+				"publisher": {
+					"@type": "Organization",
+					"name": "ONYX"
+				}
+			}
+		</script>
 	</head>
 	<!-- Body: page shell -->
 	<body
@@ -20,8 +125,15 @@
 			<div class="container-page nav-content">
 
 				<!-- Brand/logo -->
-				<a href="index.html" class="logo">
-					<img src="ONYX_sin_fondo_en_blanco-removebg-preview.png" alt="ONYX logo" class="h-30 w-30 object-contain">
+				<a href="index.html" class="logo" aria-label="Go to ONYX home page">
+					<img
+						src="ONYX_sin_fondo_en_blanco-removebg-preview.png"
+						alt="ONYX logo"
+						width="120"
+						height="120"
+						decoding="async"
+						class="h-30 w-30 object-contain"
+					>
 					<span class="logo-text"></span>
 				</a>
 
@@ -31,7 +143,7 @@
 					<ul class="nav-links">
 
 						<li><a href="index.html">Home</a></li>
-						<li><a href="index-catalogo.html">Catalog</a></li>
+						<li><a href="index-catalogo.html" aria-current="page">Catalog</a></li>
 						<li><a href="index-product.html">Products</a></li>
 						<li><a href="cart.html">Cart</a></li>
 						<li><a href="product-search.html">Searcher</a></li>
@@ -53,6 +165,9 @@
 					alt="ONYX logo"
 					width="1152"
 					height="768"
+					loading="eager"
+					decoding="async"
+					fetchpriority="high"
 					class="catalog__hero-logo mx-auto mb-5 h-36 w-auto sm:h-[10.5rem]"
 				/>
 				<h1
@@ -130,7 +245,11 @@
 			</section>
 
 			<!-- Product listing -->
-			<section class="catalog__listing" aria-labelledby="listing-title">
+			<section
+				class="catalog__listing"
+				aria-labelledby="listing-title"
+				style="content-visibility: auto; contain-intrinsic-size: 1100px;"
+			>
 				<div class="catalog__listing-header mb-5 flex items-end justify-between gap-4">
 					<h2
 						id="listing-title"
@@ -150,7 +269,10 @@
 		</main>
 
 		<!-- Footer -->
-		<footer class="catalog__footer mt-10 border-t border-neutral-200 bg-white/90">
+		<footer
+			class="catalog__footer mt-10 border-t border-neutral-200 bg-white/90"
+			style="content-visibility: auto; contain-intrinsic-size: 260px;"
+		>
 			<div
 				class="catalog__footer-container mx-auto flex w-full max-w-7xl flex-col gap-2 px-4 py-6 sm:px-6 lg:px-8"
 			>
@@ -294,13 +416,15 @@
 			const availableSizes = [...new Set(catalogProducts.flatMap((product) => product.sizes))];
 
 			// Templates and render helpers
-			const productCardTemplate = (product) => `
+			const productCardTemplate = (product, index) => {
+				const imageLoading = index < 2 ? "eager" : "lazy";
+				return `
 				<article class="catalog__product-card group flex h-full flex-col overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg">
 					<figure class="catalog__product-media relative overflow-hidden bg-neutral-100">
 						<img
 							src="${product.image}"
 							alt="${product.alt}"
-							loading="lazy"
+							loading="${imageLoading}"
 							decoding="async"
 							width="768"
 							height="1024"
@@ -325,6 +449,7 @@
 					</div>
 				</article>
 			`;
+			};
 
 			const updateResultsCount = (amount) => {
 				countElement.textContent = `${amount} result${amount === 1 ? "" : "s"}`;
@@ -359,7 +484,9 @@
 
 			const renderProducts = () => {
 				const filteredProducts = filterProducts();
-				gridElement.innerHTML = filteredProducts.map(productCardTemplate).join("");
+				gridElement.innerHTML = filteredProducts
+					.map((product, index) => productCardTemplate(product, index))
+					.join("");
 				updateResultsCount(filteredProducts.length);
 			};
 
