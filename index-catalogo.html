@@ -64,7 +64,7 @@
 					aria-label="Onyx home"
 				>
 					<img
-						src="Logo%20Onyx%20marca%20ropa.png"
+						src="ONYX%20sin%20fondo.png"
 						alt="Onyx logo"
 						width="1152"
 						height="768"
@@ -89,7 +89,7 @@
 					alt="ONYX logo"
 					width="1152"
 					height="768"
-					class="catalog__hero-logo mx-auto mb-5 h-24 w-auto sm:h-28"
+					class="catalog__hero-logo mx-auto mb-5 h-36 w-auto sm:h-[10.5rem]"
 				/>
 				<h1
 					id="catalog-title"
@@ -140,6 +140,7 @@
 							<option value="all">All categories</option>
 							<option value="shoes">Shoes</option>
 							<option value="shirt">Shirt</option>
+							<option value="pants">Pants</option>
 							<option value="dress">Dress</option>
 							<option value="accessories">Accessories</option>
 						</select>
@@ -214,7 +215,8 @@
 					description: "Leather sandals with crossover straps for elegant summer styling.",
 					price: "EUR 145",
 					sizes: ["36", "37", "38", "39", "40", "41"],
-					image: "Top%20Sales%20leather%20sandals.jpg",
+					productUrl: "product-leather-sandals.html",
+					image: "assets/Top%20Sales%20leather%20sandals.jpg",
 					alt: "Brown leather summer sandals"
 				},
 				{
@@ -225,8 +227,33 @@
 					description: "A light, fresh linen T-shirt for sunny days and seaside escapes.",
 					price: "EUR 95",
 					sizes: ["XS", "S", "M", "L", "XL"],
-					image: "Top%20sales%20men%20tshirt%20lino.jpg",
+					productUrl: "product-men-shirt-lino.html",
+					image: "assets/Top%20sales%20men%20tshirt%20lino.jpg",
 					alt: "Men's linen T-shirt in a neutral tone"
+				},
+				{
+					id: "shirt-2",
+					name: "Premium Cotton Tee",
+					category: "shirt",
+					categoryLabel: "Shirt",
+					description: "Soft premium cotton T-shirt with a clean silhouette for elevated basics.",
+					price: "EUR 110",
+					sizes: ["S", "M", "L", "XL"],
+					productUrl: "product-men-t-shirt.html",
+					image: "assets/NS%20mens%20premium%20tshirt.png",
+					alt: "Men premium cotton t-shirt"
+				},
+				{
+					id: "pant-1",
+					name: "Premium Summer Trousers",
+					category: "pants",
+					categoryLabel: "Pants",
+					description: "Breathable tailored trousers styled for warm-weather city looks.",
+					price: "EUR 130",
+					sizes: ["30", "32", "34", "36"],
+					productUrl: "product-men-trousers.html",
+					image: "assets/NS%20%20mens%20premium%20trousers.png",
+					alt: "Men premium summer trousers"
 				},
 				{
 					id: "dress-1",
@@ -236,8 +263,21 @@
 					description: "A standout red dress designed for sunset events and summer evenings.",
 					price: "EUR 175",
 					sizes: ["XS", "S", "M", "L"],
-					image: "Top%20Sales%20woman%20red%20dress.jpg",
+					productUrl: "product-woman-red-dress.html",
+					image: "assets/Top%20Sales%20woman%20red%20dress.jpg",
 					alt: "Women's red summer dress"
+				},
+				{
+					id: "dress-2",
+					name: "Summer Breeze Dress",
+					category: "dress",
+					categoryLabel: "Dress",
+					description: "Flowing cut and lightweight fabric for bright days and sunset dinners.",
+					price: "EUR 165",
+					sizes: ["XS", "S", "M", "L"],
+					productUrl: "product-woman-dress.html",
+					image: "assets/NS%20women%20summer%20dress.png",
+					alt: "Women summer dress"
 				},
 				{
 					id: "accessory-1",
@@ -247,8 +287,21 @@
 					description: "A lightweight raffia bag with an artisanal finish for a refined vacation silhouette.",
 					price: "EUR 120",
 					sizes: ["Compact", "Medium", "Large"],
-					image: "Tope%20Sales%20rafia%20bag.jpg",
+					productUrl: "product-rafia-bag.html",
+					image: "assets/Tope%20Sales%20rafia%20bag.jpg",
 					alt: "Summer raffia bag"
+				},
+				{
+					id: "accessory-2",
+					name: "Sun Hat",
+					category: "accessories",
+					categoryLabel: "Accessories",
+					description: "Wide-brim sun hat that adds shade and polished style to resort outfits.",
+					price: "EUR 85",
+					sizes: ["S", "M", "L"],
+					productUrl: "product-woman-sunhat.html",
+					image: "assets/NS%20womens%20Sun%20Hat%20BG%20good.png",
+					alt: "Women summer sun hat"
 				}
 			];
 
@@ -258,6 +311,13 @@
 			const floatingFilterPanel = document.getElementById("floating-filter-panel");
 			const gridElement = document.getElementById("catalog-grid");
 			const countElement = document.querySelector(".catalog__listing-count");
+			const categoryCounts = catalogProducts.reduce((accumulator, product) => {
+				accumulator[product.category] = (accumulator[product.category] || 0) + 1;
+				return accumulator;
+			}, {});
+			const availableCategories = [
+				...new Map(catalogProducts.map((product) => [product.category, product.categoryLabel])).entries()
+			];
 			const availableSizes = [...new Set(catalogProducts.flatMap((product) => product.sizes))];
 
 			const productCardTemplate = (product) => `
@@ -283,13 +343,28 @@
 							<p class="catalog__product-price font-['Manrope',ui-sans-serif,sans-serif] text-base font-semibold text-neutral-900">${product.price}</p>
 							<span class="catalog__product-size rounded-full bg-neutral-100 px-3 py-1 font-['Manrope',ui-sans-serif,sans-serif] text-xs font-medium text-neutral-700">Ref ${product.id.toUpperCase()}</span>
 						</div>
-						<button type="button" class="catalog__product-cta mt-1 inline-flex items-center justify-center rounded-xl bg-neutral-900 px-4 py-2.5 font-['Manrope',ui-sans-serif,sans-serif] text-sm font-semibold text-white transition hover:bg-neutral-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-400">View product</button>
+						${
+							product.productUrl
+								? `<a href="${product.productUrl}" class="catalog__product-cta mt-1 inline-flex items-center justify-center rounded-xl bg-neutral-900 px-4 py-2.5 font-['Manrope',ui-sans-serif,sans-serif] text-sm font-semibold text-white transition hover:bg-neutral-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-400">View product</a>`
+								: '<button type="button" class="catalog__product-cta mt-1 inline-flex items-center justify-center rounded-xl bg-neutral-900 px-4 py-2.5 font-[\'Manrope\',ui-sans-serif,sans-serif] text-sm font-semibold text-white transition hover:bg-neutral-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-400">View product</button>'
+						}
 					</div>
 				</article>
 			`;
 
 			const updateResultsCount = (amount) => {
 				countElement.textContent = `${amount} result${amount === 1 ? "" : "s"}`;
+			};
+
+			const populateCategoryOptions = () => {
+				categorySelect.innerHTML = ['<option value="all">All categories</option>']
+					.concat(
+						availableCategories.map(
+							([value, label]) =>
+								`<option value="${value}">${label} (${categoryCounts[value]})</option>`
+						)
+					)
+					.join("");
 			};
 
 			const populateSizeOptions = () => {
@@ -352,6 +427,7 @@
 				}
 			});
 
+			populateCategoryOptions();
 			populateSizeOptions();
 			renderProducts();
 		</script>
