@@ -48,78 +48,10 @@
 		<noscript>
 			<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap">
 		</noscript>
-		<script type="application/ld+json">
-			{
-				"@context": "https://schema.org",
-				"@type": "CollectionPage",
-				"name": "ONYX Summer 2026 Catalog",
-				"description": "Catalog page for ONYX Summer 2026 products.",
-				"inLanguage": "en",
-				"mainEntity": {
-					"@type": "ItemList",
-					"name": "ONYX Featured Products",
-					"numberOfItems": 8,
-					"itemListElement": [
-						{
-							"@type": "ListItem",
-							"position": 1,
-							"url": "product-leather-sandals.html",
-							"name": "Leather Sandals"
-						},
-						{
-							"@type": "ListItem",
-							"position": 2,
-							"url": "product-men-shirt-lino.html",
-							"name": "Linen T-Shirt"
-						},
-						{
-							"@type": "ListItem",
-							"position": 3,
-							"url": "product-men-t-shirt.html",
-							"name": "Premium Cotton Tee"
-						},
-						{
-							"@type": "ListItem",
-							"position": 4,
-							"url": "product-men-trousers.html",
-							"name": "Premium Summer Trousers"
-						},
-						{
-							"@type": "ListItem",
-							"position": 5,
-							"url": "product-woman-red-dress.html",
-							"name": "Red Summer Dress"
-						},
-						{
-							"@type": "ListItem",
-							"position": 6,
-							"url": "product-woman-dress.html",
-							"name": "Summer Breeze Dress"
-						},
-						{
-							"@type": "ListItem",
-							"position": 7,
-							"url": "product-rafia-bag.html",
-							"name": "Raffia Bag"
-						},
-						{
-							"@type": "ListItem",
-							"position": 8,
-							"url": "product-woman-sunhat.html",
-							"name": "Sun Hat"
-						}
-					]
-				},
-				"publisher": {
-					"@type": "Organization",
-					"name": "ONYX"
-				}
-			}
-		</script>
+		
 	</head>
 	<!-- Body: page shell -->
-	<body
-		class="catalog min-h-screen bg-gradient-to-b from-stone-50 via-neutral-50 to-amber-50/40 text-neutral-900 antialiased"
+	<body class="catalog min-h-screen antialiased">
 	>
 		<!-- Header: main navigation -->
 		<header class="navbar">
@@ -163,7 +95,7 @@
 			<!-- Logo section -->
 			<section class="catalog__hero mb-10 text-center lg:mb-12" aria-labelledby="catalog-title">
 				<img
-					src="ONYX%20sin%20fondo.png"
+					src="onyx_sin_fondo_en_blanco-removebg-preview.png"
 					alt="ONYX logo"
 					width="1152"
 					height="768"
@@ -173,14 +105,12 @@
 					class="catalog__hero-logo mx-auto mb-5 h-36 w-auto sm:h-[10.5rem]"
 				/>
 				<h1
-					id="catalog-title"
-					class="catalog__title mx-auto max-w-4xl font-['Cormorant_Garamond',Georgia,serif] text-4xl font-semibold uppercase leading-tight tracking-[0.04em] text-neutral-900 sm:text-5xl"
-				>
-					PRE-COLLECTION<br />SUMMER
-				</h1>
-				<p
-					class="catalog__subtitle mx-auto mt-4 max-w-3xl font-['Manrope',ui-sans-serif,sans-serif] text-sm leading-relaxed text-neutral-600 sm:text-base"
-				>
+                  id="catalog-title"
+                  class="catalog__title mx-auto max-w-4xl font-['Cormorant_Garamond',Georgia,serif] text-4xl font-semibold uppercase leading-tight tracking-[0.04em] text-neutral-50 sm:text-5xl"
+>
+                    PRE-COLLECTION<br />SUMMER
+                </h1>
+				<p class="catalog__subtitle mx-auto mt-4 max-w-3xl font-['Manrope',ui-sans-serif,sans-serif] text-sm leading-relaxed text-neutral-300 sm:text-base">
 					Designed to shine at any hour, the ONYX Summer 2026 Collection reinvents your seasonal
 					essentials. Move effortlessly from daytime elegance to the glamour of warm nights, or to a much
 					more relaxed vacation look.
@@ -280,31 +210,212 @@
 			</section>
 		</main>
 
-		<!-- Footer -->
-		<footer
-			class="catalog__footer mt-10 border-t border-neutral-200 bg-white/90"
-			style="content-visibility: auto; contain-intrinsic-size: 260px;"
-		>
-			<div
-				class="catalog__footer-container mx-auto flex w-full max-w-7xl flex-col gap-2 px-4 py-6 sm:px-6 lg:px-8"
-			>
-				<p class="catalog__footer-copy font-['Manrope',ui-sans-serif,sans-serif] text-xs text-neutral-500">
-					12 Rue du Faubourg Saint-Honore, 75008 Paris, France
-				</p>
-				<a
-					href="mailto:contact@onyx-paris.com"
-					class="catalog__footer-link w-fit font-['Manrope',ui-sans-serif,sans-serif] text-xs text-neutral-500 transition-colors hover:text-neutral-800"
-				>
-					contact@onyx-paris.com
-				</a>
-				<a
-					href="tel:+33142860000"
-					class="catalog__footer-link w-fit font-['Manrope',ui-sans-serif,sans-serif] text-xs text-neutral-500 transition-colors hover:text-neutral-800"
-				>
-					+33 1 42 86 00 00
-				</a>
-			</div>
-		</footer>
+		<!-- ================= FOOTER ================= -->
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+        <div class="container-page py-16">
+
+            <div class="grid gap-6 md:grid-cols-3">
+                <nav aria-label="Product categories" class="card">
+                    <h2 class="section-title">Categories</h2>
+                    <ul class="space-y-5">
+                    <li><a href="/category/footwear">Footwear</a></li>
+                    <li><a href="/category/shirts">Shirts</a></li>
+                    <li><a href="/category/trousers">Trousers</a></li>
+                    <li><a href="/category/accessories">Accessories</a></li>
+                    </ul>
+                </nav>
+
+                <nav aria-label="Legal" class="card">
+                    <h2 class="section-title">Legal</h2>
+                    <ul class="space-y-5">
+                    <li><a href="/terms">Terms &amp; Conditions</a></li>
+                    <li><a href="/privacy">Privacy Policy</a></li>
+                    <li><a href="/about">About Us / Our Brand</a></li>
+                    </ul>
+                </nav>
+
+                <address class="card space-y-5">
+                    <h2 class="section-title">Contact Us</h2>
+                    <p>12 Rue du Faubourg Saint-Honore, 75008 Paris, France</p>
+                    <p><a href="mailto:contact@onyx-paris.com">contact@onyx-paris.com</a></p>
+                    <p><a href="tel:+33142860000">+33 1 42 86 00 00</a></p>
+                </address>
+            </div>
+        </div>
+
+        <div class="footer-content footer-bottom">
+            <p>&copy; 2026 Onyx. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Organization",
+                "name": "Onyx",
+                "url": "https://www.onyx-paris.com/",
+                "logo": "https://www.onyx-paris.com/assets/logo-onyx.svg",
+                "description": "Onyx is a French luxury clothing house offering tailored menswear, elegant womenswear, and timeless accessories crafted in Paris.",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "12 Rue du Faubourg Saint-Honoré",
+                    "addressLocality": "Paris",
+                    "postalCode": "75008",
+                    "addressCountry": "FR"
+                },
+                "email": "contact@onyx-paris.com",
+                "telephone": "+33142860000",
+                "sameAs": []
+            },
+            {
+                "@type": "ItemList",
+                "name": "Summer Season 2026 New Arrivals",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "item": {
+                            "@type": "Product",
+                            "name": "Men's Ivory Linen Shirt",
+                            "image": "https://www.onyx-paris.com/assets/NS%20mens%20premium%20tshirt.png",
+                            "description": "A breathable ivory linen shirt with a soft texture, rolled cuffs and a polished summer silhouette.",
+                            "offers": {
+                                "@type": "Offer",
+                                "priceCurrency": "EUR",
+                                "price": "245",
+                                "availability": "https://schema.org/InStock"
+                            }
+                        }
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "item": {
+                            "@type": "Product",
+                            "name": "Men's Tailored Linen Trousers",
+                            "image": "https://www.onyx-paris.com/assets/NS%20%20mens%20premium%20trousers.png",
+                            "description": "Tailored beige linen trousers with sharp front pleats, a clean waistband and a lightweight warm-weather finish.",
+                            "offers": {
+                                "@type": "Offer",
+                                "priceCurrency": "EUR",
+                                "price": "320",
+                                "availability": "https://schema.org/InStock"
+                            }
+                        }
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "item": {
+                            "@type": "Product",
+                            "name": "Women's Sage Satin Summer Dress",
+                            "image": "https://www.onyx-paris.com/assets/NS%20women%20summer%20dress.png",
+                            "description": "A sage satin midi dress with a fluid skirt, gathered bodice and elegant movement for summer occasions.",
+                            "offers": {
+                                "@type": "Offer",
+                                "priceCurrency": "EUR",
+                                "price": "480",
+                                "availability": "https://schema.org/InStock"
+                            }
+                        }
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 4,
+                        "item": {
+                            "@type": "Product",
+                            "name": "Women's Wide-Brim Straw Hat",
+                            "image": "https://www.onyx-paris.com/assets/NS%20womens%20Sun%20Hat%20BG%20good.png",
+                            "description": "A woven straw sun hat with a structured crown, generous brim and black ribbon trim for elegant sun protection.",
+                            "offers": {
+                                "@type": "Offer",
+                                "priceCurrency": "EUR",
+                                "price": "165",
+                                "availability": "https://schema.org/InStock"
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "@type": "ItemList",
+                "name": "Top Sellers",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "item": {
+                            "@type": "Product",
+                            "name": "Men's Taupe Linen Shirt",
+                            "image": "https://www.onyx-paris.com/assets/Top%20Sales%20men%20shirt%20lino.jpg",
+                            "description": "A lightweight taupe linen shirt with an open collar, natural texture and an easy refined fit.",
+                            "offers": {
+                                "@type": "Offer",
+                                "priceCurrency": "EUR",
+                                "price": "365",
+                                "availability": "https://schema.org/InStock"
+                            }
+                        }
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "item": {
+                            "@type": "Product",
+                            "name": "Women's Red Cocktail Dress",
+                            "image": "https://www.onyx-paris.com/assets/Top%20Sales%20woman%20red%20dress.jpg",
+                            "description": "A fitted red cocktail dress with a clean square neckline, sculpted drape and modern asymmetric hemline.",
+                            "offers": {
+                                "@type": "Offer",
+                                "priceCurrency": "EUR",
+                                "price": "620",
+                                "availability": "https://schema.org/InStock"
+                            }
+                        }
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "item": {
+                            "@type": "Product",
+                            "name": "Brown Leather Sandals",
+                            "image": "https://www.onyx-paris.com/assets/Top%20Sales%20leather%20sandals.jpg",
+                            "description": "Flat brown leather sandals with crossover straps, a secure slingback buckle and artisan-inspired finishing.",
+                            "offers": {
+                                "@type": "Offer",
+                                "priceCurrency": "EUR",
+                                "price": "590",
+                                "availability": "https://schema.org/InStock"
+                            }
+                        }
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 4,
+                        "item": {
+                            "@type": "Product",
+                            "name": "Structured Raffia Handbag",
+                            "image": "https://www.onyx-paris.com/assets/Top%20Sales%20rafia%20bag.jpg",
+                            "description": "A structured raffia handbag with smooth tan leather trim, top handle and polished gold-tone clasp.",
+                            "offers": {
+                                "@type": "Offer",
+                                "priceCurrency": "EUR",
+                                "price": "890",
+                                "availability": "https://schema.org/InStock"
+                            }
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+
 
 		<!-- Catalog behavior: data, filtering and rendering -->
 		<script>
